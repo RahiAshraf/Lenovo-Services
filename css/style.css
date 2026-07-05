@@ -1,0 +1,516 @@
+:root{
+    --bg:#1A1A1A;
+    --primary:#E2231A;
+    --secondary:#C41230;
+    --accent:#2B2B2B;
+
+    --card:#FFFFFF;
+    --text:#1F2937;
+    --muted:#6B7280;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:Inter,Segoe UI,Arial,sans-serif;
+    background:var(--bg);
+    color:var(--text);
+    overflow-x:hidden;
+}
+
+/* ================= NAVBAR ================= */
+
+.glass-nav{
+    background:#ffffff;
+    backdrop-filter:blur(18px);
+    border-bottom:1px solid #e5e7eb;
+    box-shadow:0 4px 20px rgba(0,0,0,.08);
+}
+
+
+.brand-logo{
+    width:46px;
+    height:46px;
+    object-fit:contain;
+    margin-right:10px;
+}
+
+.brand-title{
+    display:flex;
+    align-items:baseline;
+    gap:6px;
+    white-space:nowrap;
+}
+
+.brand-main{
+    color:#E2231A;
+    font-size:30px;
+    font-weight:900;
+    letter-spacing:.5px;
+}
+
+.brand-sub{
+    color:#E2231A;
+    font-size:16px;
+    font-weight:700;
+}
+
+.brand-mark{
+    text-decoration:none;
+    display:flex;
+    align-items:center;
+}
+
+.brand-mark img{
+    object-fit:contain;
+}
+
+.nav-link{
+    color:black !important;
+    font-weight:700;
+}
+
+.nav-link.active,
+.nav-link:hover{
+    color:#E2231A !important;
+}
+
+
+/* ================= BUTTONS ================= */
+
+.btn-brand{
+    background:#E2231A;
+    border:none;
+    color:#FFF;
+    font-weight:700;
+    border-radius:999px;
+    padding:.8rem 1.5rem;
+    transition:.3s;
+    box-shadow:0 10px 25px rgba(226,35,26,.25);
+}
+
+.btn-brand:hover{
+    background:#E2231A;
+    color:#fff;
+    transform:translateY(-2px);
+}
+
+.btn-outline-brand{
+    border:2px solid #E2231A;
+    color:#E2231A;
+    background:#fff;
+    border-radius:999px;
+    font-weight:700;
+    padding:.8rem 1.5rem;
+    transition:.3s;
+}
+
+.btn-outline-brand:hover{
+    background:#E2231A;
+    color:#fff;
+}
+
+/* ================= HERO ================= */
+
+.hero{
+    min-height:86vh;
+    display:flex;
+    align-items:center;
+    padding:5rem 0;
+    position:relative;
+    overflow:hidden;
+
+    background:
+        linear-gradient(rgb(0, 0,0), rgba(0,0,0,0)),
+        url("../images/hero.png");
+
+         background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+    
+}
+
+.hero::before{
+    content:"";
+    position:absolute;
+    top:-100px;
+    right:-120px;
+    width:420px;
+    height:420px;
+    background:rgba(255,255,255,.08);
+    border-radius:50%;
+}
+
+.hero::after{
+    content:"";
+    position:absolute;
+    left:-120px;
+    bottom:-120px;
+    width:320px;
+    height:320px;
+    background:rgba(255,255,255,.05);
+    border-radius:50%;
+}
+
+
+.services-bg
+{
+     min-height:86vh;
+    display:flex;
+    align-items:center;
+    padding:5rem 0;
+    position:relative;
+    overflow:hidden;
+
+    background:
+        linear-gradient(rgb(0, 0,0), rgba(0,0,0,0)),
+        url("../images/lenovo-service.jpg");
+
+         background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+}
+
+
+.container-bg{
+    position:relative;
+    padding:100px 0;
+
+    background:
+        linear-gradient(rgba(0,0,0,.60), rgba(0,0,0,.60)),
+        url("../images/lenovo-contact.jpg");
+
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+    background-attachment:fixed;
+}
+
+
+.booking-bg{
+    position:relative;
+    padding:100px 0;
+
+    background:
+        linear-gradient(rgba(0,0,0,.60), rgba(0,0,0,.60)),
+        url("../images/lenovo-booking.jpg");
+
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+    background-attachment:fixed;
+}
+
+.lenovo-register{
+    position:relative;
+    padding:100px 0;
+
+    background:
+        linear-gradient(rgba(0,0,0,.60), rgba(0,0,0,.60)),
+        url("../images/lenovo-login.jpg");
+
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+    background-attachment:fixed;
+}
+
+.container-serv{
+    position:relative;
+    overflow:hidden;
+    padding:90px 0;
+
+    background-image:
+        linear-gradient(rgba(0,0,0,.55), rgba(0,0,0,.55)),
+        url("../images/lenovo-service2.jpg");
+
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+
+    /* Optional */
+    background-attachment:fixed;
+}
+.eyebrow{
+    display:inline-flex;
+    align-items:center;
+    gap:.5rem;
+    padding:.5rem 1rem;
+    border-radius:999px;
+    background:rgba(255,255,255,.12);
+    color:#fff;
+    border:1px solid rgba(255,255,255,.15);
+    font-weight:700;
+}
+
+.hero h1{
+    color:#fff;
+    font-size:clamp(2.6rem,6vw,5rem);
+    font-weight:900;
+    line-height:1.1;
+}
+
+.gradient-text{
+    color:#7ec8ff;
+}
+
+.lead{
+    color:#d8e6f5;
+}
+
+/* ================= CARDS ================= */
+
+.hero-card,
+.premium-card,
+.service-card,
+.metric,
+.feature-row{
+    background:#ffffff;
+    color:#1f2937;
+    border:1px solid #e5e7eb;
+    border-radius:20px;
+    height:max-content;
+    box-shadow:0 12px 35px rgba(0,0,0,.08);
+}
+
+.service-card{
+    padding:1.8rem;
+    transition:.3s;
+    height:100%;
+    min-height:230px;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+}
+
+.feature-row.mb-3{
+    display:flex;
+    align-items:center;
+
+    background:#ffffff;
+    color:#1f2937;
+
+    border:1px solid #e5e7eb;
+    border-radius:20px;
+
+    min-height:55px;
+
+    padding:0 20px;
+
+    width:100%;
+    max-width:420px;
+
+    box-shadow:0 8px 20px rgba(0,0,0,.08);
+
+    font-size:16px;
+    font-weight:500;
+}
+
+.feature-row.mb-3 i{
+    color:#E2231A;
+    font-size:20px;
+    margin-right:15px;
+}
+
+.hero-card{
+    padding:2rem;
+}
+
+.metric{
+    padding:1.3rem;
+}
+
+.metric h3{
+    color:#E2231A;
+    font-weight:900;
+}
+
+.section-title{
+    color:#ffffff;
+    font-size:clamp(2rem,4vw,3.3rem);
+    font-weight:900;
+}
+
+.section-subtitle{
+    color:#dbeafe;
+}
+
+.service-card{
+    padding:1.8rem;
+    transition:.3s;
+    height:100%;
+}
+
+.service-card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 18px 45px rgba(226,35,26,.18);
+}
+
+.icon-badge{
+    width:60px;
+    height:60px;
+    border-radius:16px;
+    display:grid;
+    place-items:center;
+    background:#E2231A;
+    color:#fff;
+    font-size:1.5rem;
+    margin-bottom:1rem;
+}
+
+.muted{
+    color:#6b7280;
+}
+
+/* ================= FORMS ================= */
+
+.form-control,
+.form-select{
+    background:#fff;
+    border:1px solid #d1d5db;
+    color:#1f2937;
+    padding:.85rem 1rem;
+    border-radius:14px;
+}
+
+.form-control:focus,
+.form-select:focus{
+    border-color:#E2231A;
+    box-shadow:0 0 0 .2rem rgba(226,35,26,.15);
+}
+
+.form-control::placeholder{
+    color:#9ca3af;
+}
+
+/* ================= FOOTER ================= */
+
+.footer{
+    background:#FAFAFA;
+    color:#000000;
+    border-top:1px solid rgba(255,255,255,.08);
+    padding:3rem 0;
+}
+
+.footer h5{
+    color:#333333;
+}
+
+/* ================= WHATSAPP ================= */
+
+.whatsapp-float{
+    position:fixed;
+    right:20px;
+    bottom:20px;
+    width:55px;
+    height:55px;
+    border-radius:50%;
+    background:#25D366;
+    color:#fff;
+    display:grid;
+    place-items:center;
+    text-decoration:none;
+    font-size:1.6rem;
+    box-shadow:0 10px 25px rgba(0,0,0,.25);
+    z-index:999;
+}
+
+.table-darkish{
+    --bs-table-bg:#ffffff;
+    --bs-table-color:#1f2937;
+    --bs-table-border-color:#dbe4ee;
+}
+
+section{
+    padding:5rem 0;
+    background:#f2f2f2;
+
+}
+
+.lenovo-login{
+    padding:5rem 0;
+
+    background:
+        linear-gradient(rgb(0, 0,0), rgba(0,0,0,0)),
+        url("../images/lenovo-login.jpg");
+        height:100vh;
+}
+
+@media(max-width:768px){
+
+.hero{
+    min-height:auto;
+    padding:4rem 0;
+}
+
+.hero h1{
+    font-size:2.6rem;
+}
+
+.section-title{
+    font-size:2rem;
+}
+
+}
+
+/* ================= COMPONENT LOADED HEADER/FOOTER ================= */
+.navbar-toggler{
+    border:1px solid #dbe4ee;
+}
+
+.navbar-toggler-icon{
+    filter:invert(20%) sepia(98%) saturate(1566%) hue-rotate(340deg) brightness(90%) contrast(94%);
+}
+
+.container-serv{
+    position:relative;
+    overflow:hidden;
+    padding:90px 0;
+
+    background-image:
+        linear-gradient(rgba(0,0,0,.58), rgba(0,0,0,.58)),
+        url("../images/lenovo-service.jpg");
+
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+    background-attachment:fixed;
+}
+
+.lenovo-models{
+   
+      background:
+        linear-gradient(rgb(0, 0,0), rgba(0,0,0,0)),
+        url("../images/lenovo-models.jpg");
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+}
+
+.service-card,
+.hero-card,
+.premium-card,
+.metric{
+    background:rgba(255,255,255,.94);
+    backdrop-filter:blur(8px);
+}
+
+.service-card{
+    min-height:230px;
+}
+
+.auth-section{
+    min-height:calc(100vh - 80px);
+    display:flex;
+    align-items:center;
+}
+
